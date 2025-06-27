@@ -1,0 +1,259 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: url('Header.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #2193b0;
+  color: #fff;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.destinasi {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.destinasi:hover {
+  transform: scale(1.03);
+}
+
+.destinasi img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.destinasi p {
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem;
+  font-weight: bold;
+  background: #e3f2fd;
+}
+
+.event {
+  padding: 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.event h2 {
+  color: #2193b0;
+  margin-bottom: 1.5rem;
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.video-box {
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 270px;
+  border: none;
+}
+
+.video-box p {
+  margin: 0;
+  padding: 0.8rem;
+  font-weight: bold;
+  background: #e3f2fd;
+}
+
+
+iframe {
+  width: 80%;
+  height: 400px;
+  border-radius: 12px;
+  border: none;
+}
+
+.form-section {
+  padding: 2rem;
+  background: #ffffff;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2193b0;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section label {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.form-section input,
+.form-section textarea {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-section button {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  background-color: #2193b0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+  background-color: #197694;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.artikel {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+#darkModeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#darkModeToggle:hover {
+  background-color: #2193b0;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode a {
+  color: #1e1e1e;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .artikel,
+body.dark-mode .form-section,
+body.dark-mode .gallery,
+body.dark-mode .event {
+  background-color: #1a1a1a;
+}
